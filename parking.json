@@ -1,0 +1,183 @@
+{
+    "parking_lots": [
+        {
+            "name": "Fontaine",
+            "map_filename": "mapFontaine.png",
+            "total_spaces": "40",
+            "comments": "Located behind the Fontaine Building; left upon entering through the North Gate.",
+            "status": "Open",
+            "usage_level": "Medium",
+            "spaces": [
+                {
+                    "id": "1",
+                    "type": "Faculty/Staff",
+                    "status": "Avaliable",
+                    "filled_datetime": null,
+                    "reserved_datetime": null
+                },
+                {
+                    "id": "2",
+                    "type": "Faculty/Staff",
+                    "status": "Filled",
+                    "filled_datetime": "4/27/24 at 5:00 PM EST.",
+                    "reserved_datetime": null
+                },
+                {
+                    "id": "3",
+                    "type": "Faculty/Staff",
+                    "status": "Reserved",
+                    "filled_datetime": null,
+                    "reserved_datetime": "4/27/24 at 1:00 PM EST."
+                },
+                {
+                    "id": "4",
+                    "type": "Faculty/Staff",
+                    "status": "Reserved",
+                    "filled_datetime": null,
+                    "reserved_datetime": "4/27/24 at 8:00 AM EST."
+                },
+                {
+                    "id": "5",
+                    "type": "Handicap",
+                    "status": "Avaliable",
+                    "filled_datetime": null,
+                    "reserved_datetime": null
+                },
+                {
+                    "id": "6",
+                    "type": "Handicap",
+                    "status": "Avaliable",
+                    "filled_datetime": null,
+                    "reserved_datetime": null
+                },
+                {
+                    "id": "7",
+                    "type": "Handicap",
+                    "status": "Filled",
+                    "filled_datetime": "4/27/24 at 9:00 AM EST.",
+                    "reserved_datetime": null
+                },
+                {
+                    "id": "8",
+                    "type": "Handicap",
+                    "status": "Filled",
+                    "filled_datetime": "4/27/24 at 12:00 PM EST.",
+                    "reserved_datetime": null
+                },
+                {
+                    "id": "9",
+                    "type": "Student",
+                    "status": "Avaliable",
+                    "filled_datetime": null,
+                    "reserved_datetime": null
+                },
+                {
+                    "id": "10",
+                    "type": "Student",
+                    "status": "Filled",
+                    "filled_datetime": "4/27/24 at 2:00 PM EST.",
+                    "reserved_datetime": null
+                },
+                {
+                    "id": "11",
+                    "type": "Student",
+                    "status": "Filled",
+                    "filled_datetime": "4/27/24 at 1:00 PM EST.",
+                    "reserved_datetime": null
+                },
+                {
+                    "id": "12",
+                    "type": "Student",
+                    "status": "Reserved",
+                    "filled_datetime": null,
+                    "reserved_datetime": "4/27/24 at 6:00 PM EST."
+                }
+            ]
+        },
+        {
+            "name": "McCann",
+            "map_filename": "mapMcCann.png",
+            "total_spaces": "100",
+            "comments": "Located directly south of Sheahan Hall.",
+            "status": "Open",
+            "usage_level": "High",
+            "spaces": [
+                {
+                    "id": "1",
+                    "type": "Faculty/Staff",
+                    "status": "Avaliable",
+                    "filled_datetime": null,
+                    "reserved_datetime": null
+                }
+            ]
+        },
+        {
+            "name": "Donnelly",
+            "map_filename": "mapDonnelly.png",
+            "total_spaces": "50",
+            "comments": "Located directly south of Donnelly Hall.",
+            "status": "Open",
+            "usage_level": "High",
+            "spaces": [
+                {
+                    "id": "1",
+                    "type": "Student",
+                    "status": "Avaliable",
+                    "filled_datetime": null,
+                    "reserved_datetime": null
+                }
+            ]
+        },
+        {
+            "name": "Foy",
+            "map_filename": "mapFoy.png",
+            "total_spaces": "60",
+            "comments": "Located in front of the Foy Townhouses.",
+            "status": "Open",
+            "usage_level": "Medium",
+            "spaces": [
+                {
+                    "id": "1",
+                    "type": "Student",
+                    "status": "Avaliable",
+                    "filled_datetime": null,
+                    "reserved_datetime": null
+                }
+            ]
+        },
+        {
+            "name": "Midrise",
+            "map_filename": "mapMidrise.png",
+            "total_spaces": "70",
+            "comments": "Located directly north of Mid-Rise Hall.",
+            "status": "Open",
+            "usage_level": "High",
+            "spaces": [
+                {
+                    "id": "1",
+                    "type": "Handicap",
+                    "status": "Avaliable",
+                    "filled_datetime": null,
+                    "reserved_datetime": null
+                }
+            ]
+        },
+        {
+            "name": "Riverview",
+            "map_filename": "mapRiverview.png",
+            "total_spaces": "80",
+            "comments": "Located west of the New Townhouses; north of the Midrise parking lot.",
+            "status": "Open",
+            "usage_level": "Low",
+            "spaces": [
+                {
+                    "id": "1",
+                    "type": "Handicap",
+                    "status": "Avaliable",
+                    "filled_datetime": null,
+                    "reserved_datetime": null
+                }
+            ]
+        }
+    ]
+}
