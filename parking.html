@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<nav class="navbar">
+  <a href="#">
+      <img src="https://raw.githubusercontent.com/epserrano312/SD330/main/marist-parking-high-resolution-logo.png" alt="Logo" class="logo">
+  </a>
+<div class="nav-links">
+  <a href="#">Parking Lots</a>
+  <a href="#">Login</a>
+  <a href="#">Contact</a>
+  <a href="#">Help</a>
+</div>
+</nav>
+
+<head>
+  <title> Parking App Login </title>
+  <meta charset="UTF-8">
+  <!-- Links the CSS file to the homepage HTML file. -->
+  <link href="./sd330css.css" rel="stylesheet">
+  <!-- Links public Albert Sans fonts from Google to the homepage HTML file. -->
+  <link href="https://fonts.googleapis.com/css?family=Albert Sans" rel="stylesheet">
+</head>
+
+<body>
+  <section>
+    <article>
+      <!-- Left section of the beginning of the homepage. -->
+      <div class="textLeft">
+        <center> <h1> Welcome to </h1> </center>
+        <img src="https://raw.githubusercontent.com/epserrano312/SD330/main/marist-parking-high-resolution-logo-transparent.png"
+          width="600"
+          length="302"
+          >
+        <p> Marist Parking is a newly established application that allows its users
+          to quickly and effectively find parking spots at Marist College. Drivers of 
+          all kinds will be able to reserve spots, check which lots are avaliable,
+          check which spots are avaliable, check the parking type of a spot, and various 
+          other useful options! </p>
+      </div>
+    </article>
+
+    <!-- Right section of the beginning of the homepage. -->
+    <article id="rightSide">
+      <form>
+        <div id="loginBox" class="container">
+          <!-- Displays log in box that includes entry for username, password, etc. -->
+          <center> <h2> Log in </h2> </center>
+          <label>Username : </label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+          <label>Password : </label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+          <input type="checkbox" checked="unchecked"> Remember me
+          <button type="submit" id="loginButton">Login</button>
+          <!-- Text that redirects to password recovery page (not functional). -->
+          <a href="#"> Forgot Password? </a>
+          <center> <h2> Don't have an account? </h2> </center>
+          <!-- Button that redirects to sign up page. -->
+          <button id="signUpButton"> Sign up now </button>
+        </div>
+      </form>
+    </article>
+  </section>
+
+  <!-- Links the homepage javascript file to the homepage HTML file. -->
+  <script> 
+  
+  </script>
+</body>
+</html>
