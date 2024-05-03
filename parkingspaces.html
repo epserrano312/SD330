@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<nav class="navbar">
+<a href="parking.html">
+    <img src="https://raw.githubusercontent.com/epserrano312/SD330/main/marist-parking-high-resolution-logo.png" alt="Logo" class="logo">
+</a>
+<div class="nav-links">
+    <a href="parkinglots.html">Parking Lots</a>
+    <a href="404.html">Login</a>
+    <a href="404.html">Contact</a>
+    <a href="404.html">Help</a>
+</div>
+</nav>
+
+<nav id="crumbsBar">
+</div>
+    <ol>
+        <li class="crumb"><a href="parking.html">Homepage</a></li>
+        <li class="crumb"><a href="parkinglots.html">Parking Lots</a></li>
+        <li class="crumb" id="currentPage"> </li>
+    </ol>
+</div>
+</nav>
+
+<head>
+    <title> Parking App Spaces </title>
+    <meta charset="UTF-8">
+    <!-- Links the CSS file to the homepage HTML file. -->
+    <link href="404.css" rel="stylesheet">
+    <!-- Links public Albert Sans fonts from Google to the homepage HTML file. -->
+    <link href="https://fonts.googleapis.com/css?family=Albert Sans" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="pageTitle"></h1>
+    <div id="chosenLot"></div>
+</body>
+
+<footer>
+    <div class="footer-links">
+      <a href="404.html">Privacy Policy</a>
+      <a href="404.html">Terms of Use</a>
+      <a href="404.html">Contact Us</a>
+    </div>
+    <p id="footerText"> &copy; 2024 E. Serrano - All rights reserved.</p>
+</footer>
+
+<script type="module">
+    const response = await fetch("https://epserrano312.github.io/SD330//parking.json");
+    const data = await response.json();
+
+    const queryString = window.location.search;
+    console.log('queryLot:: ' + queryString);
+    const urlParams = new URLSearchParams(queryString);
+    let checkLot = urlParams.get('lot');
+    console.log('checkLot:: ' + checkLot);
+
+    let htmlString = "";
+
+    for (let i = 0; i < data['parking_lots'].length; i++) {
+        let lotName = data['parking_lots'][i]['name'];
+        console.log('lotName:: ' + lotName);
+        if (checkLot == lotName){
+            document.getElementById('currentPage').innerHTML = ('> ' + checkLot + " Parking Spaces");
+            document.getElementById('pageTitle').innerHTML = (checkLot + " Parking Spaces");
+            let chosenSpaces = data['parking_lots'][i]['spaces'];
+            console.log(chosenSpaces);
+            console.log(chosenSpaces.length);
+            for (let j = 0; j < chosenSpaces.length; j++) {
+                console.log("Space ID: " + chosenSpaces[j]['id']);
+                console.log("Type: " + chosenSpaces[j]['type']);
+                console.log("Status: " + chosenSpaces[j]['status']);
+                console.log("Filled Date and Time: " + chosenSpaces[j]['filled_datetime']);
+                console.log("Reserved Date and Time: " + chosenSpaces[j]['reserved_datetime']);
+                htmlString += "<h2>Space ID: " + chosenSpaces[j]['id'] + "</h2><hr>";
+                htmlString += "<p>Type: " + chosenSpaces[j]['type'];
+                htmlString += "<p>Status: " + chosenSpaces[j]['status'];
+
+                if (chosenSpaces[j]['filled_datetime'] == null)
+                    htmlString += "<p>Filled Date and Time: N/A";
+                else
+                    htmlString += "<p>Filled Date and Time: " + chosenSpaces[j]['filled_datetime'];
+
+                if (chosenSpaces[j]['reserved_datetime'] == null)
+                    htmlString += "<p class='textSpaceBelow'>Reserved Date and Time: N/A";
+                else
+                    htmlString += "<p class='textSpaceBelow'>Reserved Date and Time: " + chosenSpaces[j]['reserved_datetime'];
+            }
+        document.getElementById('chosenLot').innerHTML += htmlString;
+        }
+    }
+</script>
+
+</html>
