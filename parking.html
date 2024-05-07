@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Displays the navigation bar with each link leading to a 404 except the parking lots link. -->
+<nav class="navbar">
+  <a href="parking.html">
+      <img src="https://raw.githubusercontent.com/epserrano312/SD330/main/marist-parking-high-resolution-logo.png" alt="Logo" class="logo">
+  </a>
+  <div class="nav-links">
+    <a href="parkinglots.html">Parking Lots</a>
+    <a href="404.html">Login</a>
+    <a href="404.html">Contact</a>
+    <a href="404.html">Help</a>
+    <a href="404.html">Tickets</a>
+    <a href="404.html">Accounts</a>
+  </div>
+</nav>
+
+<head>
+  <title> Parking App Homepage </title>
+  <meta charset="UTF-8">
+  <!-- Links the CSS file to the homepage HTML file. -->
+  <link href="parking.css" rel="stylesheet">
+  <!-- Links public Albert Sans fonts from Google to the homepage HTML file. -->
+  <link href="https://fonts.googleapis.com/css?family=Albert Sans" rel="stylesheet">
+</head>
+
+<body>
+  <section>
+    <article>
+      <!-- Left section of the beginning of the homepage. -->
+      <div class="textLeft">
+        <center> <h1> Welcome to </h1> </center>
+        <center> <img src="https://raw.githubusercontent.com/epserrano312/SD330/main/marist-parking-high-resolution-logo-transparent.png"
+          width="600"
+          length="302"
+          > </center>
+        <p> Marist Parking is a newly established application that allows its users
+          to quickly and effectively find parking spots at Marist College. Drivers of 
+          all kinds will be able to reserve spots, check which lots are avaliable,
+          check which spots are avaliable, check the parking type of a spot, and various 
+          other useful options! </p>
+      </div>
+    </article>
+
+    <!-- Right section of the beginning of the homepage. -->
+    <article id="rightSide">
+      <form>
+        <div id="loginBox" class="container">
+          <!-- Displays log in box that includes entry for username, password, etc. -->
+          <center> <h2> Log in </h2> </center>
+          <label>Username : </label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+          <label>Password : </label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+          <input type="checkbox" checked="unchecked"> Remember me
+          <button type="submit" id="loginButton">Login</button>
+          <!-- Text that redirects to password recovery page (not functional). -->
+          <a href="404.html"> Forgot Password? </a>
+          <center> <h2> Don't have an account? </h2> </center>
+          <!-- Button that redirects to sign up page. -->
+          <button id="signUpButton"> Sign up now </button>
+        </div>
+      </form>
+    </article>
+  </section>
+</body>
+
+<!-- Footer of page with privacy policy, terms of use, and contact us links that lead to 404. -->
+<footer>
+  <div class="footer-links">
+    <a href="404.html">Privacy Policy</a>
+    <a href="404.html">Terms of Use</a>
+    <a href="404.html">Contact Us</a>
+  </div>
+  <p id="footerText"> &copy; 2024 E. Serrano - All rights reserved.</p>
+</footer>
+
+<script>
+  // Redirects user to 404 page after clicking on the login button.
+  document.getElementById("loginButton").addEventListener('click', () => {
+    location.href = "404.html";
+  })
+  // Redirects user to the 404 page after clicking on the sign up button.
+  document.getElementById("signUpButton").addEventListener('click', () => {
+    location.href = "404.html";
+  })
+</script>
+</html>
